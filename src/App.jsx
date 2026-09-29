@@ -15,7 +15,7 @@ function App() {
     },
     {
       id: generateID(),
-      text: "This text will disappear within 55 seconds.",
+      text: "This text will disappear within 10 seconds.",
       expiresAt: getNewExpirationTime(),
     },
   ]);
