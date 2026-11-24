@@ -1,11 +1,11 @@
 import { useState } from "react";
 import AddThoughtForm from "./AddThoughtForm";
-import Header from "./header";
+import Header from "./Header";
 import Thought from "./Thought";
 import {
 	default as generateID,
 	default as getNewExpirationTime,
-} from "./utilities";
+} from "./Utilities";
 
 function App() {
 	const [thoughts, setThoughts] = useState([
