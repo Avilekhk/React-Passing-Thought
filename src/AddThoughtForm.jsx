@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   default as generateID,
   default as getNewExpirationTime,
-} from "./utilities";
+} from "./Utilities";
 
 function AddThoughtForm(props) {
   const [text, setText] = useState("");
