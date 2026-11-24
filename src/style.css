@@ -1,72 +1,116 @@
+[data-theme="dark"] {
+	--primary-color: #9a97f3;
+	--secondary-color: #818cab;
+	--font-color: #e1e1ff;
+	--font-color-inverted: #424242;
+	--bg-color: #161625;
+	--bg-color-inverted: #fff;
+	--heading-color: #818cab;
+}
+
+[data-theme="light"] {
+	--primary-color: #302ae6;
+	--secondary-color: #536390;
+	--font-color: #424242;
+	--font-color-inverted: #e1e1ff;
+	--bg-color: #fff;
+	--bg-color-inverted: #161625;
+	--heading-color: #292922;
+}
+
 body {
-  margin: 0;
-  font-size: 16pt;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-size: 16pt;
+	font-family:
+		-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+		"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	transition:
+		background-color 180ms ease,
+		color 180ms ease;
 }
 
 input,
 button {
-  font: inherit;
-  box-sizing: border-box;
+	font: inherit;
+	box-sizing: border-box;
 }
 
 input[type="submit"],
 button {
-  cursor: pointer;
+	cursor: pointer;
+}
+
+input {
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	border-color: var(--secondary-color);
+}
+
+button {
+	background-color: var(--primary-color);
+	color: var(--font-color-inverted);
+	border: 1px solid var(--primary-color);
+	border-radius: 3px;
+	padding: 0.35em 0.6em;
+}
+
+.App h1 {
+	color: var(--heading-color);
 }
 
 .App {
-  margin: 0 auto;
-  max-width: 600px;
-  width: 95%;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 95%;
 }
 
 .App h1:before {
-  content: "🧠";
-  margin-right: 0.5em;
+	content: "🧠";
+	margin-right: 0.5em;
 }
 
 .AddThoughtForm {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .AddThoughtForm input {
-  padding: 1.5rem;
-  border: 1px solid #666;
-  border-radius: 3px;
+	padding: 1.5rem;
+	border: 1px solid #666;
+	border-radius: 3px;
 }
 
 .AddThoughtForm input[type="text"] {
-  flex-grow: 1;
-  margin-right: 0.5rem;
+	flex-grow: 1;
+	margin-right: 0.5rem;
 }
 
 .thoughts {
-  list-style-type: none;
-  padding: 0;
+	list-style-type: none;
+	padding: 0;
 }
 
 .Thought {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 3px;
-  background-color: #eee;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 3px;
+	background-color: var(--bg-color-inverted);
+	color: var(--font-color-inverted);
 }
 
 .Thought .remove-button {
-  font-size: 80%;
-  float: right;
-  border: 0;
-  border-radius: 3px;
-  background: transparent;
+	font-size: 80%;
+	float: right;
+	border: 0;
+	border-radius: 3px;
+	background: transparent;
 }
 
 .Thought .remove-button:hover {
-  color: #fff;
-  background-color: #000;
+	color: #fff;
+	background-color: #000;
 }
